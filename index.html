@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>⬡-DRONE COMMUNICATION PROTOCOL</title>
+</head>
+<body>
+    <canvas class="canvas"></canvas>
+    <div class="container">
+        <h1 class="heading">
+            ⬡-DRONE COMMUNICATION PROTOCOL
+        </h1>
+        <div class="input-wrapper">
+            <label for="code">Drone Code: </label>
+            <input value="xxxx" class="drone-code" type="text" name="code" placeholder="xxxx" id="">
+        </div>
+        <div class="decorative"></div>
+        <div class="input-wrapper">
+            <label for="content">Filter by Message Content: </label>
+            <input class="message-content" type="text" name="content" placeholder="Message content" id="">
+        </div>
+        <div class="input-wrapper">
+            <label for="status-code">Filter by Status Code: </label>
+            <select class="status-code" name="status-code">
+                <option value="All">All</option>
+                <option value="Statement">Statements</option>
+                <option value="Commentary">Commentary</option>
+                <option value="Query">Query</option>
+                <option value="Answer">Answer</option>
+                <option value="Response">Response</option>
+                <option value="Status">Status</option>
+                <option value="Mantra">Mantra</option>
+                <option value="Error">Error</option>
+            </select>
+        </div>
+        <div class="decorative"></div>
+        <div class="codes">
+
+        </div>
+        
+    </div>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
