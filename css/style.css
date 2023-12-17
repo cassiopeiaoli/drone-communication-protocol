@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow-x: hidden;
     background-color: black;
 }
 
@@ -75,6 +76,53 @@ input, select, option {
 
 .codes {
     margin-top: 10px;
+}
+
+.animation {
+    color:rgb(187, 0, 187);
+    font-size: 10rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: disappear 0.5s 2s forwards;
+}
+
+.animation .sign {
+    opacity: 0;
+    animation: sign-appear 1s forwards, sign-zoom 1s 1s forwards;
+}
+
+@keyframes sign-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes sign-zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
 }
 
 @media screen and (max-width: 400px) {
