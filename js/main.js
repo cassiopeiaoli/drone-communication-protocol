@@ -51,7 +51,7 @@ function search() {
     const listifiedStatuses = Object.entries(statusCodes);
 
     const filteredByStatusCode = listifiedStatuses.filter(([_, value]) => {
-        return value.includes(statusCode) && value.includes(messageFilter);
+        return (value.includes(statusCode) || statusCode === "All") && value.includes(messageFilter);
     });
 
     codes.innerHTML = null;
