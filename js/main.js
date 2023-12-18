@@ -33,9 +33,19 @@ window.addEventListener("resize", () => {
 
 draw();
 
+function addPaddingToCode(code) {
+    let cd = code;
+    while (cd.length < 3) {
+        cd = "0" + cd;
+    }
+
+    return cd;
+}
+
 function renderStatusCode([code, value]) {
     const droneCode = droneCodeInput.value;
-    const string = `${droneCode} :: Code ${code} :: ${value}`;
+    const transformedCode = addPaddingToCode(code);
+    const string = `${droneCode} :: Code ${transformedCode} :: ${value}`;
     const status = `
         <p>${string}</p>
         <button class='copy'>COPY</button>
