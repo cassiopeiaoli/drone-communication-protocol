@@ -81,6 +81,8 @@ function search() {
 function updateStatusCodesWithDroneCode() {
     const droneCode = droneCodeInput.value;
 
+    localStorage.setItem('code', droneCode);
+
     document.querySelectorAll(".code").forEach((code) => {
         const text = code.querySelector("p");
         const content = text.textContent;
@@ -94,3 +96,7 @@ statusCodeInput.addEventListener("change", search);
 messageContentInput.addEventListener("input", search);
 droneCodeInput.addEventListener("input", updateStatusCodesWithDroneCode);
 search();
+
+if (localStorage.getItem('code')) {
+    droneCodeInput.value = localStorage.getItem('code');
+}
