@@ -95,8 +95,9 @@ function updateStatusCodesWithDroneCode() {
 statusCodeInput.addEventListener("change", search);
 messageContentInput.addEventListener("input", search);
 droneCodeInput.addEventListener("input", updateStatusCodesWithDroneCode);
-search();
 
 if (localStorage.getItem('code')) {
     droneCodeInput.value = localStorage.getItem('code');
 }
+
+search();
