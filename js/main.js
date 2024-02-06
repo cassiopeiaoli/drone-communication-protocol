@@ -70,7 +70,7 @@ function search() {
     const filteredByStatusCode = listifiedStatuses.filter(([_, value]) => {
         return (
             (value.toLowerCase().includes(statusCode.toLowerCase()) || statusCode === "All") &&
-            value.includes(messageFilter)
+            value.toLowerCase().includes(messageFilter.toLowerCase())
         );
     });
 
